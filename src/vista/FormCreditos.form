@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="vista.FormCreditos">
+  <grid id="27dc6" binding="panelPrincipal" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="829" height="535"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="b1eda" class="javax.swing.JLabel" binding="lblTitulo">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Créditos - BookUsers"/>
+        </properties>
+      </component>
+      <component id="1068a" class="javax.swing.JLabel" binding="lblIntegrante1">
+        <constraints>
+          <grid row="1" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Integrante 1"/>
+        </properties>
+      </component>
+      <component id="969fb" class="javax.swing.JLabel" binding="lblCodigo1">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Código: UNP-R929-VGFB"/>
+        </properties>
+      </component>
+      <component id="b71ba" class="javax.swing.JLabel" binding="lblNombre1">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nombre: Victor Manuel Rodriguez López"/>
+        </properties>
+      </component>
+      <component id="93298" class="javax.swing.JLabel" binding="lblCorreo1">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Correo: victor.rodriguezlop@unipaz.edu.co"/>
+        </properties>
+      </component>
+      <component id="39687" class="javax.swing.JLabel" binding="lblCorreo2">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Correo: alex.saezale@unipaz.edu.co"/>
+        </properties>
+      </component>
+      <component id="a980b" class="javax.swing.JLabel" binding="lblCodigo2">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Código: UNP-ZKF6-3KV5"/>
+        </properties>
+      </component>
+      <component id="eefdd" class="javax.swing.JLabel" binding="lblIntegrante2">
+        <constraints>
+          <grid row="4" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Integrante 2"/>
+        </properties>
+      </component>
+      <component id="5a540" class="javax.swing.JLabel" binding="lblNombre2">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nombre: Alex David Saez Aleman"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

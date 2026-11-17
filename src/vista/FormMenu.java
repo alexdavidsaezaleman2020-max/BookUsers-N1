@@ -14,12 +14,18 @@ public class FormMenu {
     private final ArrayList<Usuario> usuarios = new ArrayList<>();
     private int siguienteId = 1;
 
+    public FormMenu() {
+
+        btnCreditos.addActionListener(e -> {
+            FormCreditos creditos = new FormCreditos();
+            creditos.mostrar();
+        });
+
+    }
 
     public int obtenerSiguienteId() {
         return siguienteId++;
     }
-
-
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -34,5 +40,4 @@ public class FormMenu {
             ventana.setVisible(true);
         });
     }
-
 }
