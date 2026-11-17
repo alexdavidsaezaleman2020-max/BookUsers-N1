@@ -27,6 +27,11 @@ public class FormMenu {
             registro.mostrar();
         });
 
+        btnListado.addActionListener(e -> {
+            FormListado listado = new FormListado(usuarios);
+            listado.mostrar();
+        });
+
     }
 
 
