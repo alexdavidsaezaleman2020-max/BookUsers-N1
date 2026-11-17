@@ -55,6 +55,38 @@ public class FormRegistro {
         txtSegundoApellido.getDocument().addDocumentListener(listener);
 
         actualizarUsername();
+
+        btnGuardar.addActionListener(e -> {
+
+            if (validarCampos()) {
+
+                Usuario nuevo = new Usuario(
+                        menu.obtenerSiguienteId(),
+                        cmbTipoId.getSelectedItem().toString(),
+                        txtNumeroIdentificacion.getText().trim(),
+                        txtPrimerNombre.getText().trim(),
+                        txtSegundoNombre.getText().trim(),
+                        txtPrimerApellido.getText().trim(),
+                        txtSegundoApellido.getText().trim(),
+                        new String(pwdPassword.getPassword()),
+                        txtTelefono.getText().trim(),
+                        txtCorreo.getText().trim(),
+                        ""
+                );
+
+                usuarios.add(nuevo);
+
+                JOptionPane.showMessageDialog(
+                        panelPrincipal,
+                        "Usuario registrado correctamente.\n"
+                                + "ID: " + nuevo.getId()
+                                + "\nUsername: " + nuevo.getUsername()
+                );
+
+                limpiarFormulario();
+            }
+        });
+
     }
 
 
@@ -67,6 +99,66 @@ public class FormRegistro {
         );
 
         lblUsername.setText(username);
+    }
+
+
+    private boolean validarCampos() {
+
+        if (cmbTipoId.getSelectedItem() == null
+                || txtNumeroIdentificacion.getText().trim().isEmpty()
+                || txtPrimerNombre.getText().trim().isEmpty()
+                || txtPrimerApellido.getText().trim().isEmpty()
+                || new String(pwdPassword.getPassword()).trim().isEmpty()
+                || txtTelefono.getText().trim().isEmpty()
+                || txtCorreo.getText().trim().isEmpty()) {
+
+            JOptionPane.showMessageDialog(
+                    panelPrincipal,
+                    "Complete todos los campos obligatorios.");
+
+            return false;
+        }
+
+        String tipoId = cmbTipoId.getSelectedItem().toString();
+        String numeroId = txtNumeroIdentificacion.getText().trim();
+
+        if (!tipoId.startsWith("41 -")
+                && !tipoId.startsWith("42 -")
+                && !numeroId.matches("\\d+")) {
+
+            JOptionPane.showMessageDialog(
+                    panelPrincipal,
+                    "El número de identificación debe contener solo dígitos.");
+
+            return false;
+        }
+
+        if (!txtCorreo.getText().contains("@")) {
+
+            JOptionPane.showMessageDialog(
+                    panelPrincipal,
+                    "El correo electrónico debe contener @.");
+
+            return false;
+        }
+
+        return true;
+    }
+
+
+    private void limpiarFormulario() {
+
+        cmbTipoId.setSelectedIndex(0);
+        txtNumeroIdentificacion.setText("");
+        txtPrimerNombre.setText("");
+        txtSegundoNombre.setText("");
+        txtPrimerApellido.setText("");
+        txtSegundoApellido.setText("");
+        pwdPassword.setText("");
+        txtTelefono.setText("");
+        txtCorreo.setText("");
+
+        lblUsername.setText("Se generará automáticamente");
     }
 
 
