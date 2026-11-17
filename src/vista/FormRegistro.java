@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import com.sha2cs.inputfile.InputFile;
+import java.io.File;
+import java.awt.Dimension;
 
 public class FormRegistro {
     private JPanel panelPrincipal;
@@ -22,6 +25,7 @@ public class FormRegistro {
     private JButton btnCargarFoto;
     private JLabel lblFoto;
     private JButton btnGuardar;
+    private String rutaFoto = "";
 
     private final ArrayList<Usuario> usuarios;
     private final FormMenu menu;
@@ -71,7 +75,7 @@ public class FormRegistro {
                         new String(pwdPassword.getPassword()),
                         txtTelefono.getText().trim(),
                         txtCorreo.getText().trim(),
-                        ""
+                        rutaFoto
                 );
 
                 usuarios.add(nuevo);
@@ -84,6 +88,18 @@ public class FormRegistro {
                 );
 
                 limpiarFormulario();
+            }
+        });
+
+        lblFoto.setPreferredSize(new Dimension(120, 120));
+        lblFoto.setHorizontalAlignment(SwingConstants.CENTER);
+
+        btnCargarFoto.addActionListener(e -> {
+
+            File foto = InputFile.elegirYMostrar(panelPrincipal, lblFoto);
+
+            if (foto != null) {
+                rutaFoto = foto.getAbsolutePath();
             }
         });
 
@@ -157,6 +173,9 @@ public class FormRegistro {
         pwdPassword.setText("");
         txtTelefono.setText("");
         txtCorreo.setText("");
+        InputFile.limpiar(lblFoto);
+        lblFoto.setText("Sin fotografía");
+        rutaFoto = "";
 
         lblUsername.setText("Se generará automáticamente");
     }
