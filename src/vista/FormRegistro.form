@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="vista.FormRegistro">
+  <grid id="27dc6" binding="panelPrincipal" layout-manager="GridLayoutManager" row-count="16" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="980" height="731"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="597dc" class="javax.swing.JLabel" binding="lblTitulo">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="4" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Registro de usuarios - BookUsers"/>
+        </properties>
+      </component>
+      <component id="60638" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="494" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Tipo de identificación"/>
+        </properties>
+      </component>
+      <component id="5e22c" class="javax.swing.JComboBox" binding="cmbTipoId">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="11 - Registro civil de nacimiento"/>
+            <item value="12 - Tarjeta de identidad"/>
+            <item value="13 - Cédula de ciudadanía"/>
+            <item value="21 - Tarjeta de extranjería"/>
+            <item value="22 - Cédula de extranjería"/>
+            <item value="41 - Pasaporte"/>
+            <item value="42 - Documento de identificación extranjero"/>
+            <item value="47 - Permiso Especial de Permanencia (PEP)"/>
+            <item value="91 - NUIP"/>
+          </model>
+        </properties>
+      </component>
+      <component id="519ab" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="494" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Primer nombre"/>
+        </properties>
+      </component>
+      <component id="d3b25" class="javax.swing.JTextField" binding="txtPrimerNombre">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="f1c80" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="494" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Primer apellido"/>
+        </properties>
+      </component>
+      <component id="a2b2f" class="javax.swing.JTextField" binding="txtPrimerApellido">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ac051" class="javax.swing.JLabel" binding="lblUsername">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Username generado"/>
+        </properties>
+      </component>
+      <component id="479ca" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Se generara automaticamente"/>
+        </properties>
+      </component>
+      <component id="35986" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Contraseña"/>
+        </properties>
+      </component>
+      <component id="14018" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Teléfono"/>
+        </properties>
+      </component>
+      <component id="71f58" class="javax.swing.JPasswordField" binding="pwdPassword">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="6b8de" class="javax.swing.JTextField" binding="txtTelefono">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="e990b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Correo electrónico"/>
+        </properties>
+      </component>
+      <component id="78b1" class="javax.swing.JTextField" binding="txtCorreo">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="28dd0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Fotografía del usuario"/>
+        </properties>
+      </component>
+      <component id="eade9" class="javax.swing.JButton" binding="btnGuardar">
+        <constraints>
+          <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Guardar usuario"/>
+        </properties>
+      </component>
+      <component id="c91c9" class="javax.swing.JButton" binding="btnCargarFoto">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Cargar fotografía"/>
+        </properties>
+      </component>
+      <component id="e80e6" class="javax.swing.JLabel" binding="lblFoto">
+        <constraints>
+          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Sin fotografía"/>
+        </properties>
+      </component>
+      <component id="39f4e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Número de identificación"/>
+        </properties>
+      </component>
+      <component id="1154c" class="javax.swing.JTextField" binding="txtNumeroIdentificacion">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="88127" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Segundo nombre"/>
+        </properties>
+      </component>
+      <component id="527d9" class="javax.swing.JTextField" binding="txtSegundoNombre">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="adb29" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Segundo apellido"/>
+        </properties>
+      </component>
+      <component id="ad0c6" class="javax.swing.JTextField" binding="txtSegundoApellido">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>

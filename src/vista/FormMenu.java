@@ -14,6 +14,7 @@ public class FormMenu {
     private final ArrayList<Usuario> usuarios = new ArrayList<>();
     private int siguienteId = 1;
 
+
     public FormMenu() {
 
         btnCreditos.addActionListener(e -> {
@@ -21,7 +22,13 @@ public class FormMenu {
             creditos.mostrar();
         });
 
+        btnRegistro.addActionListener(e -> {
+            FormRegistro registro = new FormRegistro(usuarios, this);
+            registro.mostrar();
+        });
+
     }
+
 
     public int obtenerSiguienteId() {
         return siguienteId++;
