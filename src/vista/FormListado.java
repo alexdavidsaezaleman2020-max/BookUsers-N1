@@ -19,6 +19,23 @@ public class FormListado {
         }
 
         lstUsuarios.setModel(modelo);
+
+        btnVerDetalle.addActionListener(e -> {
+
+            if (lstUsuarios.getSelectedIndex() == -1) {
+                JOptionPane.showMessageDialog(
+                        panelPrincipal,
+                        "Seleccione un usuario de la lista."
+                );
+                return;
+            }
+
+            Usuario seleccionado = (Usuario) lstUsuarios.getSelectedValue();
+
+            FormDetalle detalle = new FormDetalle(seleccionado);
+            detalle.mostrar();
+        });
+
     }
 
     public void mostrar() {
