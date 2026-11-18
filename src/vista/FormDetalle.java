@@ -4,6 +4,10 @@ import modelo.Usuario;
 import com.sha2cs.inputfile.InputFile;
 import javax.swing.*;
 import java.awt.Dimension;
+import com.sha2cs.generatepdf.DocumentoPDF;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
 
 public class FormDetalle {
     private JPanel panelPrincipal;
@@ -19,8 +23,10 @@ public class FormDetalle {
     private JLabel lblTelefono;
     private JLabel lblCorreo;
     private JButton btnGenerarPDF;
+    private final Usuario usuario;
 
     public FormDetalle(Usuario usuario) {
+        this.usuario = usuario;
 
         lblId.setText(String.valueOf(usuario.getId()));
         lblTipoIdentificacion.setText(usuario.getTipoIdentificacion());
@@ -40,6 +46,7 @@ public class FormDetalle {
             InputFile.limpiar(lblFoto);
             lblFoto.setText("Sin fotografía");
         }
+        btnGenerarPDF.addActionListener(e -> generarPDF());
     }
 
 
@@ -53,5 +60,45 @@ public class FormDetalle {
         ventana.setVisible(true);
     }
 
+
+    private void generarPDF() {
+
+        try {
+            DocumentoPDF documento = new DocumentoPDF("Ficha de usuario - BookUsers");
+
+            String rutaFoto = usuario.getRutaFoto();
+
+            if (rutaFoto != null && !rutaFoto.isBlank()
+                    && new File(rutaFoto).isFile()) {
+                documento.imagen(rutaFoto);
+            }
+
+            documento.campo("ID", usuario.getId());
+            documento.campo("Tipo de identificación", usuario.getTipoIdentificacion());
+            documento.campo("Número de identificación", usuario.getNumeroIdentificacion());
+            documento.campo("Primer nombre", usuario.getPrimerNombre());
+            documento.campo("Segundo nombre", usuario.getSegundoNombre());
+            documento.campo("Primer apellido", usuario.getPrimerApellido());
+            documento.campo("Segundo apellido", usuario.getSegundoApellido());
+            documento.campo("Username", usuario.getUsername());
+            documento.campo("Teléfono", usuario.getTelefono());
+            documento.campo("Correo", usuario.getCorreo());
+
+            File pdf = documento.guardar("usuario-" + usuario.getId() + ".pdf");
+
+            JOptionPane.showMessageDialog(
+                    panelPrincipal,
+                    "PDF generado correctamente:\n" + pdf.getAbsolutePath()
+            );
+
+            Desktop.getDesktop().open(pdf);
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(
+                    panelPrincipal,
+                    "No se pudo generar el PDF: " + e.getMessage()
+            );
+        }
+    }
 
 }
