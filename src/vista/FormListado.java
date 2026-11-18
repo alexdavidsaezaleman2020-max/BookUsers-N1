@@ -40,7 +40,7 @@ public class FormListado {
 
     public void mostrar() {
 
-        JFrame ventana = new JFrame("BookUsers - Listado de usuarios");
+        JFrame ventana = new JFrame("BookUsers - Listado de usuarios - Victor Rodriguez y Alex Saez");
         ventana.setContentPane(panelPrincipal);
         ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         ventana.setSize(650, 450);

@@ -183,7 +183,7 @@ public class FormRegistro {
 
     public void mostrar() {
 
-        JFrame ventana = new JFrame("BookUsers - Registro de usuarios");
+        JFrame ventana = new JFrame("BookUsers - Registro de usuarios - Victor Rodriguez y Alex Saez");
 
         ventana.setContentPane(panelPrincipal);
         ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

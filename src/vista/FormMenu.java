@@ -42,7 +42,7 @@ public class FormMenu {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
 
-            JFrame ventana = new JFrame("BookUsers - Menú principal");
+            JFrame ventana = new JFrame("BookUsers - Victor Rodriguez y Alex Saez");
 
             ventana.setContentPane(new FormMenu().panelPrincipal);
             ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

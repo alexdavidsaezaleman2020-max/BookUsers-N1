@@ -1,3 +1,22 @@
+
+## Integrantes
+
+**Integrante 1**
+- Nombre: Victor Manuel ROdriguez Lopez
+- Código: UNP-R929-VGFB
+
+**Integrante 2**
+- Nombre: Alex David Saez Aleman
+- Codigo: UNP-ZKF6-3KV5
+
+## Cómo ejecutar BookUsers
+
+1. Abrir el proyecto en IntelliJ IDEA.
+2. Configurar el JDK 21.
+3. Verificar que las librerías de la carpeta `lib` estén agregadas al módulo.
+4. Abrir `src/vista/FormMenu.java`.
+5. Ejecutar el método `main()` de `FormMenu`.
+
 # BookUsers · POO 2026B · Grupo N1 · UNIPAZ
 
 Proyecto base del ejercicio BookUsers: registro de usuarios con Java Swing.

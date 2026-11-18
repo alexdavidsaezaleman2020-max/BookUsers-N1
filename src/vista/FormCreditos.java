@@ -17,7 +17,7 @@ public class FormCreditos {
 
     public void mostrar() {
 
-        JFrame ventana = new JFrame("BookUsers - Créditos");
+        JFrame ventana = new JFrame("BookUsers - Créditos - Victor Rogdriguez y Alex Saez");
 
         ventana.setContentPane(panelPrincipal);
         ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

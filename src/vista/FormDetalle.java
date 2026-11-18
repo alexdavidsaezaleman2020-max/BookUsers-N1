@@ -52,7 +52,7 @@ public class FormDetalle {
 
     public void mostrar() {
 
-        JFrame ventana = new JFrame("BookUsers - Detalle del usuario");
+        JFrame ventana = new JFrame("BookUsers - Detalle del usuario - Victor Rodriguez y Alex Saez");
         ventana.setContentPane(panelPrincipal);
         ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         ventana.setSize(750, 600);
